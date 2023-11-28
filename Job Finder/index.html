@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Finder</title>
+    <link rel="stylesheet" href="jb-style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="sidebar">
+      <h1 class="logo">JobsPlace</h1>
+      <div class="menus">
+        <!-- <a href="#"><ion-icon name="home-outline"></ion-icon> Home</a> -->
+        <a href="#"><ion-icon name="newspaper-outline"></ion-icon> Find Jobs</a>
+        <a href="#"
+          ><ion-icon name="stats-chart-outline"></ion-icon> Performance</a
+        >
+        <a href="#"><ion-icon name="bookmarks-outline"></ion-icon> Bookmarks</a>
+        <a href="#"><ion-icon name="mail-unread-outline"></ion-icon> Message</a>
+        <a href="#"><ion-icon name="settings-outline"></ion-icon> Settings</a>
+      </div>
+      <div class="profile">
+        <img src="2.png" alt="" class="profile-img" />
+        <div class="profile-name">
+          <h4>Shreyash Jain</h4>
+          <p>Web Developer</p>
+        </div>
+      </div>
+    </div>
+    <!-- main -->
+    <div class="main">
+      <div class="main-header">
+        <ion-icon class="menu-bar" name="menu-outline"></ion-icon>
+        <div class="search">
+          <input type="text" placeholder="Search your best job here..." />
+          <button class="btn-search">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+
+      <div class="filter-wrapper">
+        <p>Recommendations</p>
+        <div class="filter">
+          <button class="btn-filter">Data Science</button>
+          <button class="btn-filter">Data Engineer</button>
+          <button class="btn-filter">Data Analyst</button>
+          <button class="btn-filter">Data Visualisation</button>
+          <button class="btn-filter">CRM Analyst</button>
+        </div>
+      </div>
+
+      <div class="sort">
+        <p>Sort</p>
+        <div class="sort-list">
+          <select>
+            <option value="0">All</option>
+            <option value="1">Newest Post</option>
+            <option value="2">Oldest Post</option>
+            <option value="3">Most Relevant</option>
+            <option value="4">Highest Paid</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="card" onclick="handleCardClick(0)">
+          <div class="card-left blue-bg">
+            <img src="google-logo-9808.png" alt="" />
+          </div>
+          <div class="card-center">
+            <h3>Google</h3>
+            <p class="card-detail">Data Science Data Engineer</p>
+            <p class="card-loc">
+              <ion-icon name="location-outline"></ion-icon>Abcd street
+            </p>
+            <div class="card-sub">
+              <p><ion-icon name="today-outline"></ion-icon>1 mins ago</p>
+              <p><ion-icon name="hourglass-outline"></ion-icon>Full Time</p>
+              <p><ion-icon name="people-outline"></ion-icon>200 Applicants</p>
+            </div>
+          </div>
+          <div class="card-right">
+            <div class="card-tag">
+              <h5>Division</h5>
+              <a href="#">Data Engineer</a>
+            </div>
+            <div class="card-salary">
+              <p><b>$350k</b> <span>/ year</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" onclick="handleCardClick(1)">
+          <div class="card-left yellow-bg">
+            <img src="tik-tok-logo-33077.png" alt="" />
+          </div>
+          <div class="card-center">
+            <h3>Tiktok</h3>
+            <p class="card-detail">Data Analyst, Product Analyst</p>
+            <p class="card-loc">
+              <ion-icon name="location-outline"></ion-icon>Abcd street
+            </p>
+            <div class="card-sub">
+              <p><ion-icon name="today-outline"></ion-icon>10 mins ago</p>
+              <p><ion-icon name="hourglass-outline"></ion-icon>Full Time</p>
+              <p><ion-icon name="people-outline"></ion-icon>130 Applicants</p>
+            </div>
+          </div>
+          <div class="card-right">
+            <div class="card-tag">
+              <h5>Division</h5>
+              <a href="#">Data Science</a>
+            </div>
+            <div class="card-salary">
+              <p><b>$200k</b> <span>/ year</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" onclick="handleCardClick(2)">
+          <div class="card-left red-bg">
+            <img src="youtube-logo-png-2088.png" alt="" />
+          </div>
+          <div class="card-center">
+            <h3>Youtube</h3>
+            <p class="card-detail">Data Analyst Product Analyst</p>
+            <p class="card-loc">
+              <ion-icon name="location-outline"></ion-icon>Abcd street
+            </p>
+            <div class="card-sub">
+              <p><ion-icon name="today-outline"></ion-icon>1 hour ago</p>
+              <p><ion-icon name="hourglass-outline"></ion-icon>Full Time</p>
+              <p><ion-icon name="people-outline"></ion-icon>240 Applicants</p>
+            </div>
+          </div>
+          <div class="card-right">
+            <div class="card-tag">
+              <h5>Division</h5>
+              <a href="#">Engineer, Product</a>
+            </div>
+            <div class="card-salary">
+              <p><b>$485k</b> <span>/ year</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" onclick="handleCardClick(3)">
+          <div class="card-left purple-bg">
+            <img src="png-apple-logo-9713.png" alt="" />
+          </div>
+          <div class="card-center">
+            <h3>Apple</h3>
+            <p class="card-detail">UI UX Designer</p>
+            <p class="card-loc">
+              <ion-icon name="location-outline"></ion-icon>Abcd street
+            </p>
+            <div class="card-sub">
+              <p><ion-icon name="today-outline"></ion-icon>1 hour ago</p>
+              <p><ion-icon name="hourglass-outline"></ion-icon>Full Time</p>
+              <p><ion-icon name="people-outline"></ion-icon>175 Applicants</p>
+            </div>
+          </div>
+          <div class="card-right">
+            <div class="card-tag">
+              <h5>Division</h5>
+              <a href="#">Engineer, Product</a>
+            </div>
+            <div class="card-salary">
+              <p><b>$230k</b> <span>/ year</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" onclick="handleCardClick(4)">
+          <div class="card-left yellow-bg">
+            <img src="amazon-png-logo-vector-6708.png" alt="" />
+          </div>
+          <div class="card-center">
+            <h3>Amazon</h3>
+            <p class="card-detail">Custom</p>
+            <p class="card-loc">
+              <ion-icon name="location-outline"></ion-icon>Abcd street
+            </p>
+            <div class="card-sub">
+              <p><ion-icon name="today-outline"></ion-icon>5 hour ago</p>
+              <p><ion-icon name="hourglass-outline"></ion-icon>Full Time</p>
+              <p><ion-icon name="people-outline"></ion-icon>200 Applicants</p>
+            </div>
+          </div>
+          <div class="card-right">
+            <div class="card-tag">
+              <h5>Division</h5>
+              <a href="#">Customer</a>
+            </div>
+            <div class="card-salary">
+              <p><b>$190k</b> <span>/ year</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail">
+      <ion-icon class="close-detail" name="close-detail"></ion-icon>
+      <div id="company-info-sidebar"></div>
+      <hr class="divider" />
+      <div class="detail-btn">
+        <button class="btn-apply" onclick="handleApplyJob()">Apply Now</button>
+      </div>
+    </div>
+
+    <div class="primary-modal-container" id="custom-modal">
+      <span class="close-button" onclick="handleCloseModal()">&times;</span>
+      <div class="modal-content" id="modal-content">
+        <div class="content-head">Job Application</div>
+        <form class="content-body" onsubmit="handleFinalApply(event)">
+          <div class="input-label-primary-container">
+            <div class="input-label-secondary-container">
+              <label for="firstName" class="application-input-label"
+                >First Name</label
+              >
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                class="application-input"
+                placeholder="Enter your first name"
+                required
+              />
+            </div>
+            <div class="input-label-secondary-container">
+              <label for="lastName" class="application-input-label"
+                >Last Name</label
+              >
+              <input
+                type="text"
+                name="lastName"
+                id="lastName"
+                class="application-input"
+                placeholder="Enter your last name"
+                required
+              />
+            </div>
+          </div>
+          <div class="input-label-primary-container">
+            <div class="input-label-secondary-container">
+              <label for="email" class="application-input-label">Email</label>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                class="application-input"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="input-label-secondary-container">
+              <label for="jobRole" class="application-input-label"
+                >Job Role</label
+              >
+              <input
+                type="text"
+                name=""
+                id="jobRole"
+                class="application-input"
+                placeholder="Enter your email"
+                readonly
+              />
+            </div>
+          </div>
+          <div class="input-label-primary-container">
+            <div class="txt-area-wrapper">
+              <label for="address" class="application-input-label"
+                >Address</label
+              >
+              <textarea
+                type="text"
+                name="address"
+                id="address"
+                class="address-text-area"
+                placeholder="Enter your address"
+                required
+              ></textarea>
+            </div>
+          </div>
+          <div class="input-label-primary-container">
+            <div class="input-label-secondary-container">
+              <label for="city" class="application-input-label">City</label>
+              <input
+                type="text"
+                name="city"
+                id="city"
+                class="application-input"
+                placeholder="Enter your city"
+                required
+              />
+            </div>
+            <div class="input-label-secondary-container">
+              <label for="pincode" class="application-input-label"
+                >Pincode</label
+              >
+              <input
+                type="text"
+                name="pincode"
+                id="pincode"
+                class="application-input"
+                placeholder="Enter your pincode"
+                required
+              />
+            </div>
+          </div>
+          <div class="input-label-primary-container">
+            <div class="input-label-secondary-container">
+              <label for="dob" class="application-input-label">D.O.B</label>
+              <input
+                type="date"
+                name="dob"
+                id="dob"
+                class="application-input"
+                required
+              />
+            </div>
+            <div class="input-label-secondary-container">
+              <label for="uploadCV" class="application-input-label"
+                >Upload Your CV</label
+              >
+              <input type="file" name="" id="uploadCV" />
+            </div>
+          </div>
+          <div class="final-apply-btn-container">
+            <input type="submit" value="Apply Now" class="btn-apply" />
+          </div>
+        </form>
+        <div></div>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="app.js"></script>
+    <script type="text/javascript" src="./jobFindLogic.js"></script>
+  </body>
+</html>

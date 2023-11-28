@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Builder</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="rb-style.css" />
+  </head>
+  <body>
+    <div class="container" id="cv-form">
+      <h1 class="text-center mt-3">RESUME BUILDER</h1>
+      <p class="text-center">Build Your Resume</p>
+
+      <div class="row">
+        <div class="col-md-6">
+          <!-- first column -->
+          <h3>Personal Information</h3>
+          <div class="form-group">
+            <label for="namefield">Your Name</label>
+            <input
+              type="text"
+              id="namefield"
+              placeholder="Enter Your Name"
+              class="form-control"
+            />
+          </div>
+
+          <div class="form-group mt-3">
+            <label for="contactfield">Your Contact</label>
+            <input
+              type="text"
+              id="contactfield"
+              placeholder="Enter Your Contact Number"
+              class="form-control"
+            />
+          </div>
+
+          <div class="form-group mt-3">
+            <label for="addressfield">Your Address</label>
+            <textarea
+              id="addressfield"
+              placeholder="Enter Your Contact Number"
+              class="form-control"
+              rows="3"
+            ></textarea>
+          </div>
+
+          <div class="class-group mt3">
+            <label for="">Select Your Profile Picture</label>
+            <input id="imgfield" type="file" class="form-control" />
+          </div>
+
+          <p class="text-secondary my-2">Important Links</p>
+
+          <div class="form-group mt-2">
+            <label for="linkedfield">LinkedIn</label>
+            <input
+              type="text"
+              id="linkedfield"
+              placeholder="Enter Here"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group mt-2">
+            <label for="gitfield">Github</label>
+            <input
+              type="text"
+              id="gitfield"
+              placeholder="Enter Here"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group mt-2">
+            <label for="fbfield">FaceBook</label>
+            <input
+              type="text"
+              id="fbfield"
+              placeholder="Enter Here"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <!-- ------------------------------------------------------------------------------------------------------------------------------------------- -->
+        <div class="col-md-6">
+          <!-- second column -->
+          <h3>Professional Informtion</h3>
+
+          <div class="form-group mt-2">
+            <label for="">Objective</label>
+            <textarea
+              id="Objectivefield"
+              placeholder="Enter Here"
+              class="form-control wefield"
+              rows="4"
+              `
+            ></textarea>
+          </div>
+
+          <div class="form-group mt-2" id="we">
+            <label for="">Work Experience</label>
+            <textarea
+              placeholder="Enter Here"
+              class="form-control wesfield"
+              rows="3"
+            ></textarea>
+            <!-- dadafdvdvdvdsv -->
+            <div class="container text-center mt-2" id="weaddbutton">
+              <button
+                onclick="addNewWEfield()"
+                class="btn btn-primary btn-sm px-2"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+
+          <div class="form-group mt-2" id="AQ">
+            <label for="">Academic Qualification</label>
+            <textarea
+              placeholder="Enter Here"
+              class="form-control aqfield"
+              rows="3"
+            ></textarea>
+
+            <div class="container text-center mt-2" id="aqaddbutton">
+              <button
+                onclick="addNewAQfield()"
+                class="btn btn-primary btn-sm px-2"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-center mt-3">
+        <button onclick="generateCV()" class="btn btn-primary btn-lg">
+          Generate CV
+        </button>
+      </div>
+    </div>
+
+    <!-- CV-Template -->
+
+    <div class="container" id="cv-template">
+      <div class="row">
+        <div id="col1" class="col-md-4 text-center py-4 background">
+          <!-- col first -->
+          <img
+            src="https://campussafetyconference.com/wp-content/uploads/2020/08/iStock-476085198-300x300.jpg"
+            alt="not found"
+            class="img-fluid myimg"
+            id="imgtemplate"
+          />
+
+          <div class="container text-wrap">
+            <p id="nameT1">Shreyash Jain</p>
+            <p id="contactT">+919483903992, +919483903900</p>
+            <p id="addressT">jain Colony,Daba Road Ludhiana, India</p>
+
+            <hr />
+
+            <p>
+              <a class="text-wrap" id="linkedT" href="#" target="_blank"
+                >www.google.com</a
+              >
+            </p>
+            <p>
+              <a class="text-wrap" id="gitT" href="#" target="_blank"
+                >www.google.com</a
+              >
+            </p>
+            <p>
+              <a class="text-wrap" id="fbT" href="#" target="_blank"
+                >www.google.com</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-8 py-4">
+          <!-- col second -->
+          <div id="secname" class="text-center" style="font-weight: 900">
+            <h1 id="nameT2" class="text-center">Shreyash Jain</h1>
+          </div>
+          <div class="card mt-2">
+            <div class="card-header background">
+              <h3>Objective</h3>
+            </div>
+
+            <div class="card-body">
+              <p id="objectiveT">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae, quas minima? Autem sapiente exercitationem reiciendis
+                aperiam ratione. Recusandae ipsum quas dolorem vero eveniet
+                animi placeat, nulla ad nam adipisci ratione. Hic fugiat
+                perferendis eius quod quibusdam, deleniti doloribus! Debitis
+                praesentium voluptatibus quam officia. Facere, quasi aperiam
+                ipsam cum quam enim!
+              </p>
+            </div>
+          </div>
+
+          <!-- Work Experience -->
+
+          <div class="card mt-4">
+            <div class="card-header background">
+              <h3>Work Experience</h3>
+            </div>
+
+            <div class="card-body">
+              <ul id="weT">
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Placeat, impedit.
+                </li>
+              </ul>
+              <!-- <ul>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Placeat, impedit.
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Placeat, impedit.
+                </li>
+              </ul> -->
+            </div>
+          </div>
+
+          <!-- Academic Qualifications -->
+
+          <div class="card mt-4">
+            <div class="card-header background">
+              <h3>Academic Qualification</h3>
+            </div>
+
+            <div class="card-body">
+              <ul id="aqT">
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Placeat, impedit.
+                </li>
+              </ul>
+              <!-- <ul>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Placeat, impedit.
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Placeat, impedit.
+                </li>
+              </ul> -->
+            </div>
+          </div>
+
+          <div class="container mt-3 text-center">
+            <button onclick="printCV()" class="btn background">Print CV</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="rb-logic.js"></script>
+  </body>
+</html>
